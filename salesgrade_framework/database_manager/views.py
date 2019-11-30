@@ -5,18 +5,16 @@ from django.template import loader
 
 
 # Create your views here.
-
-def index(request):
-    latest_name_list = Name.objects.order_by('-publication_date')[:5]
-    template = loader.get_template('database_manager/index.html')
-    context = {
-        'latest_name_list': latest_name_list,
-    }
-    return HttpResponse(template.render(context, request))
+def database_view(request):
+    template = loader.get_template('database_manager/database_view.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
 
 def own_results(request, user_name):
-    template= loader.get_template('database_manager/own_results.html')
-    context= {}
-    return HttpResponse(template.render(context, request))
+    if (user_name != 'index'):
+        return HttpResponse('here are your own results, dear %s ' % user_name)
+    else: 
+        raise Exception
+
 def same_age(request, user_age):
     return HttpResponse("Here is everyone who is %s " %user_age + "years old")
