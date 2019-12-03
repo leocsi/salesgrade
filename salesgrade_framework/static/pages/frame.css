@@ -1,0 +1,9 @@
+.menu_bar {
+  background-color: black;
+  color: aquamarine;
+  overflow: hidden;
+}
+
+.menu_bar a { 
+  color: crimson;
+}
