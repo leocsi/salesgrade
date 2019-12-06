@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
 class DatabaseConfig(AppConfig):
-    name = 'database_manager'
+    name = 'database'

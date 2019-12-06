@@ -5,7 +5,7 @@ from django.shortcuts import loader
 
 # Create your views here.
 
-def A(request):
-    template= loader.get_template('pages/frame.html')
+def Index(request):
+    template= loader.get_template('frame/frame.html')
     context= {}
     return HttpResponse(template.render(context, request))

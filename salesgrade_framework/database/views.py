@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from database_manager.models import Name, Age
+from database.models import Name, Age
 from django.template import loader
 
 
 # Create your views here.
 def database_view(request):
-    template = loader.get_template('database_manager/database_view.html')
+    template = loader.get_template('database/database_view.html')
     context = {}
     return HttpResponse(template.render(context,request))
 

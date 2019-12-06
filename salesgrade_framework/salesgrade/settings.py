@@ -15,7 +15,9 @@ from django.conf import settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMPLATE_DIR = (
+    os.path.join(BASE_DIR,"templates")
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -32,8 +34,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig',
-    'database_manager.apps.DatabaseConfig',
+    'database.apps.DatabaseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'salesgrade.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +125,4 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
-TEMPLATE_DIRS = (
-    PROJECT_PATH + '/templates/',
-)
+
