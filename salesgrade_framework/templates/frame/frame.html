@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 
-{% load static %}
+
 
 <html>
-    {%block head%}
+    {% load static %}
     <head>
+
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'frame/frame.css' %}" />
         {% block css %}
-            <link rel="stylesheet" href="{% static 'frame/frame.css' %}" />
-        {% endblock %}
+        {% endblock css%}
 
-        {% block title%}<title>Salesgrade</title>{%endblock%}
+        {% block title%}<title>Salesgrade</title>{%endblock title%}
     </head>
-    {%endblock head%}
-
     <body>
-        <div class="menu_bar">
-            <a class="active" href="#home">Salesgrade</a>
-            <a href="#own_results">My page</a>
-            <a href="#recruits">My Recruits</a>
-            <a href="#stats">Statistics</a>
-            <a href="#blog">Blog</a>
-
+        <div>
+            <ul class="menu_bar">
+                <li><a class="mainpage" href="#home">Salesgrade</a></li>
+                <li><a class="leftbar" href="#own_results">My page</a></li>
+                <li><a class="leftbar" href="#recruits">My Recruits</a></li>
+                <li><a class="leftbar" href="http://127.0.0.1:8000/database/own_results">Statistics</a></li>
+                <li><a class="leftbar" href="#blog">Blog</a></li>
+                <li><a class="rightbar"href="#sign up">Sign up</a></li>
+                <li><a class="rightbar"href="#login">Log In</a></li>
+            </ul>
         </div>
-        
+        <div class="content">
+            {%block content%}
+            {%endblock content%}
+        </div>
     </body>
-</html>
+    
+    
+    </html>

@@ -6,6 +6,6 @@ from django.shortcuts import loader
 # Create your views here.
 
 def Index(request):
-    template= loader.get_template('frame/frame.html')
+    template= loader.get_template('salesgrade/index.html')
     context= {}
     return HttpResponse(template.render(context, request))
