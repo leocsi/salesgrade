@@ -5,7 +5,6 @@
 <html>
     {% load static %}
     <head>
-
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'frame/frame.css' %}" />
         {% block css %}
@@ -14,20 +13,41 @@
         {% block title%}<title>Salesgrade</title>{%endblock title%}
     </head>
     <body>
-        <div>
-            <ul class="menu_bar">
-                <li><a class="mainpage" href="#home">Salesgrade</a></li>
-                <li><a class="leftbar" href="#own_results">My page</a></li>
-                <li><a class="leftbar" href="#recruits">My Recruits</a></li>
-                <li><a class="leftbar" href="http://127.0.0.1:8000/database/own_results">Statistics</a></li>
-                <li><a class="leftbar" href="#blog">Blog</a></li>
-                <li><a class="rightbar"href="#sign up">Sign up</a></li>
-                <li><a class="rightbar"href="#login">Log In</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            {%block content%}
-            {%endblock content%}
+        <div class="page-container">
+            <nav class="menu">
+                <ul class="leftside menu-group">
+                    <li class="menu-group-item home"><a href="http://127.0.0.1:8000">Salesgrade</a></li>
+                    <li class="menu-group-item"><a href="#http://127.0.0.1:8000/database/own_results">My page</a></li>
+                    <li class="menu-group-item"><a href="#recruits">My Recruits</a></li>
+                    <li class="menu-group-item"><a href="#stats">Statistics</a></li>
+                    <li class="menu-group-item"><a href="#blog">Blog</a></li>
+                </ul>
+                <ul class="rightside menu-group">
+                    <li class="menu-group-item"><a href="#sign up">Sign up</a></li>
+                    <li class="menu-group-item"><a href="#login">Log In</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                {%block content%}
+                {%endblock content%}
+            </div>
+
+            <footer class="bottom-bar">
+                <ul class= "leftbottom bottom-bar-group">
+                    <li class="bottom-bar-group-item"><a href = "">Facebook</a></li> 
+                    <li class="bottom-bar-group-item"><a href = "">Twitter</a></li>
+                    <li class="bottom-bar-group-item"><a href = "">Instagram</a></li>
+                    <li class="bottom-bar-group-item"><a href = "">LinkedIn</a></li>
+                </ul>
+                <ul>
+                    <li class="bottom-bar-group-item"><p style="color:white">&copy;2019 salesgrade.com</p></li>
+                </ul>
+                <ul class = "rightbottom bottom-bar-group">
+                    <li class="bottom-bar-group-item"><a href = "">Terms & Conditions</a></li> 
+                    <li class="bottom-bar-group-item"><a href = "">Privacy & Cookies</a></li>
+                    <li class="bottom-bar-group-item"><a href = "">About</a></li>
+                </ul>
+            </footer>
         </div>
     </body>
     
