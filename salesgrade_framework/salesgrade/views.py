@@ -4,6 +4,10 @@ from django.shortcuts import loader
 
 
 # Create your views here.
+def Test(request):
+    template = loader.get_template('salesgrade/test.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 def Index(request):
     template= loader.get_template('salesgrade/index.html')
