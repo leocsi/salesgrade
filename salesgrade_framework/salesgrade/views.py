@@ -5,7 +5,7 @@ from django.shortcuts import loader
 
 # Create your views here.
 def Test(request):
-    template = loader.get_template('salesgrade/test.html')
+    template = loader.get_template('self_test/1_prof_comm.html')
     context = {}
     return HttpResponse(template.render(context, request))
 

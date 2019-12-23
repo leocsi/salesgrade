@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from database.models import Name, Age
+from database.models import Name#, Age
 from django.template import loader
 
 
