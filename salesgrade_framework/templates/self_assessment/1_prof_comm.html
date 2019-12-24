@@ -1,0 +1,29 @@
+{%extends 'frame/frame.html'%}
+{%load static%}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {%block css%}
+            <link rel="stylesheet" href="{% static 'self_test/1_prof_comm.css' %}" />
+        {%endblock css%}
+    </head>
+    <body>
+        {%block content%}
+            <h1>#1 Sales profession, communication</h1>
+            <form action="" method="POST"></form>
+            {% csrf_token %}
+                <input type="radio" name="1" id = "1" value="7">
+                <input type="radio" name="1" id = "2" value="6">
+                <input type="radio" name="1" id = "3" value="5">
+                <input type="radio" name="1" id = "4" value="4">
+                <input type="radio" name="1" id = "5" value="3">
+                <input type="radio" name="1" id = "6" value="2">
+                <input type="radio" name="1" id = "7" value="1">
+
+
+        {%endblock%}
+    </body>
+
+</html>

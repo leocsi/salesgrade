@@ -6,22 +6,32 @@ from django.utils import timezone
 
 class Name(models.Model):
     user_name = models.CharField(max_length=200)
+
     publication_date = models.DateTimeField('date published')
+
     age= models.IntegerField(default=0)
+
     prof_comm_score = models.IntegerField(default=1)
     prof_comm_status = models.IntegerField(default=1)
+
     teamwork_score = models.IntegerField(default=1)
     teamwork_status =  models.IntegerField(default=1)
+
     prod_knowledge_score =  models.IntegerField(default=1)
     prod_knowledge_status =  models.IntegerField(default=1)
+
     part_comp_score =  models.IntegerField(default=1)
     part_comp_status =  models.IntegerField(default=1)
+
     relations_score =  models.IntegerField(default=1)
     relations_status =  models.IntegerField(default=1)
+
     strategy_score =  models.IntegerField(default=1)
     strategy_status =  models.IntegerField(default=1)
+
     loyality_score =  models.IntegerField(default=1)
     loyality_status =  models.IntegerField(default=1)
+    
     overall_score = models.IntegerField(default = 7)
 
     def __str__(self):
